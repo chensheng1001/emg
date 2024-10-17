@@ -16,6 +16,30 @@ class Configuration:
     data_count: Dict[str, int] = dataclasses.field(default_factory = data_count.copy)
     class_num: int = state_class_num
 
+    seed: int = 3035
+    gpu_id = [0]
+
+    batch_size = 16
+
+    net = 'CNN'
+    learning_rate = 1e-5
+    learning_rate_decay = 0.99
+    num_epoch_lr_decay = 1
+    start_lr_decay = -1
+
+    is_load = False
+    load_model_path = ""
+
+    exp_path = '/workspace/exp'
+    exp_name = 'cnn'
+
+    max_epoch = 100
+    
+    val_freq = 10
+    val_every_start = 50
+
+    print_freq = 10
+
 
 default_configs = Configuration()
   

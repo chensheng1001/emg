@@ -62,4 +62,4 @@ if __name__ == '__main__':
     batch = next(iter(data_loader))
     for tensor in batch:
         print(tensor.shape, tensor.dtype)
-    print(tensor)
+        print(tensor)
